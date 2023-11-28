@@ -1,0 +1,826 @@
+* {
+  margin: 0;
+}
+body {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    width: 100vw;
+  }
+}
+/* HEADER */
+header {
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.437);
+  padding: 50px;
+}
+header .logo {
+  display: none;
+}
+header .nav {
+  text-align: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+  line-height: 1cm;
+}
+header button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  height: 30px;
+  width: 80px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-left: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    z-index: 1999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  header .logo {
+    height: 180px;
+    width: 270px;
+    object-fit: contain;
+    background-image: url(../images/removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  header .nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    color: white;
+    font-size: large;
+  }
+  header button {
+    height: 50px;
+    width: 110px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+  }
+}
+
+/* HERO */
+.hero {
+  height: auto;
+  width: 100%;
+  background-image: url(../images/kijani-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  padding: 50px;
+}
+.hero .intro h4 {
+  line-height: 0.5cm;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 30px;
+}
+.hero .intro h4 i {
+  color: rgb(77, 163, 77);
+}
+.hero .intro p {
+  width: 70%;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.hero button {
+  height: 30px;
+  width: 100px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.hero .btn1 {
+  background-color: transparent;
+  border: solid 1px snow;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.hero .btn2 {
+  background-color: rgb(77, 163, 77);
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .content {
+    z-index: 1;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 18, 18, 0.527);
+    z-index: 1;
+  }
+
+  .hero .intro h4 {
+    line-height: 1cm;
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+  }
+
+  .hero .intro p {
+    width: 60%;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 50px;
+  }
+  .hero button {
+    height: 50px;
+    width: 300px;
+    color: #fff;
+    font-size: larger;
+    text-transform: capitalize;
+  }
+}
+/* PARTNERSHIPS */
+.partners {
+  height: auto;
+  width: 100%;
+  padding: 50px;
+  background-color: white;
+  border: solid 1px rgb(207, 202, 202);
+}
+.partners .container h6 {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.partners .container h6 > span {
+  color: rgb(77, 163, 77);
+  text-transform: uppercase;
+  font-size: 13;
+}
+
+.partners .container .logo {
+  background: white;
+  margin-left: 50px;
+  float: none;
+}
+.partners .container .logo img {
+  height: 60px;
+  width: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .partners {
+    height: 20vh;
+  }
+  .partners .container h6 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .partners .container h6 > span {
+    text-transform: uppercase;
+    font-size: larger;
+  }
+
+  .partners .container .logo {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .partners .container .logo img {
+    height: 50px;
+    width: 100px;
+  }
+}
+/* WHO WE ARE */
+.who-we-are {
+  height: auto;
+  width: 100%;
+  padding: 50px;
+}
+.who-we-are .container {
+  margin-left: 50px;
+  float: none;
+}
+.who-we-are .container .img {
+  height: 300px;
+  width: 80%;
+  border-radius: 15px;
+  background-image: url(../images/whoweare.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.who-we-are .container .explanation {
+  width: 100%;
+}
+.who-we-are .container .explanation h5 {
+  color: rgb(77, 163, 77);
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+.who-we-are .container .explanation h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 0.5cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.who-we-are .container .explanation P {
+  font-size: 10px;
+  letter-spacing: 1px;
+  height: 170px;
+  width: 80%;
+  line-height: 0.5cm;
+  font-weight: 500;
+}
+.who-we-are .container .explanation button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .who-we-are {
+    height: 60vh;
+    width: 90vw;
+  }
+
+  .who-we-are .container {
+    padding: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .who-we-are .container .img {
+    width: 400px;
+    border-radius: 25px;
+  }
+  .who-we-are .container .explanation {
+    width: 50%;
+  }
+  .who-we-are .container .explanation h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .who-we-are .container .explanation h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1cm;
+    letter-spacing: 2px;
+  }
+  .who-we-are .container .explanation P {
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 170px;
+    width: 500px;
+    line-height: 25px;
+  }
+  .who-we-are .container .explanation button {
+    height: 40px;
+    width: 150px;
+    font-size: smaller;
+  }
+}
+/* EMMISSIONS */
+.emmissions {
+  height: auto;
+  width: 100%;
+  padding: 50px;
+}
+.emmissions .content {
+  float: none;
+}
+.emmissions .content .background-emmission {
+  height: 300px;
+  width: 80%;
+  border-radius: 15px;
+  background-image: url(../images/emmissions.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 70px;
+}
+.emmissions .content .background-emmission h1 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #fff;
+  z-index: 3;
+}
+.emmissions .content .background-emmission h1 > span {
+  color: rgb(77, 163, 77);
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: 3;
+  padding-top: 70px;
+}
+.emmissions .description {
+  width: 80%;
+}
+.emmissions .description h5 {
+  color: rgb(77, 163, 77);
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.emmissions .description h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 0.5cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.emmissions .description ul {
+  font-size: 13px;
+  letter-spacing: 1px;
+  width: 70%;
+  line-height: 25px;
+}
+::marker {
+  color: rgb(77, 163, 77);
+}
+.emmissions .description button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .emmissions {
+    height: 100vh;
+    width: 90vw;
+  }
+  .emmissions .content {
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .emmissions .content .background-emmission {
+    height: 400px;
+    width: 500px;
+  }
+  .emmissions .content .background-emmission h1 {
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+    margin-top: 70px;
+  }
+  .emmissions .content .background-emmission h1 > span {
+    color: rgb(77, 163, 77);
+    text-transform: uppercase;
+    font-size: 45px;
+    z-index: 3;
+    padding-top: 70px;
+  }
+  .emmissions .description {
+    width: 40%;
+  }
+  .emmissions .description h5 {
+    font-size: 18px;
+  }
+  .emmissions .description h3 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    line-height: 1cm;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .emmissions .description ul {
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 170px;
+    width: 100%;
+    line-height: 25px;
+    font-weight: 500;
+  }
+  .emmissions .description button {
+    height: 50px;
+    width: 270px;
+    font-size: medium;
+    margin-top: 70px;
+  }
+}
+
+/* INGONYAMA */
+.ingonyama {
+  height: auto;
+  width: 100%;
+  float: none;
+  padding: 50px;
+}
+.ingonyama .content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ingonyama .content h2 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 0.5;
+  font-weight: 800;
+  letter-spacing: 1px;
+  width: 75%;
+  text-align: center;
+}
+.ingonyama .content p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  width: 70%;
+  line-height: 25px;
+  font-weight: 500;
+}
+.ingonyama .content button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  font-size: 13px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .ingonyama {
+    height: 50vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .ingonyama .content {
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .ingonyama .content h2 {
+    font-size: 30px;
+    line-height: 1cm;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
+  .ingonyama .content p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 170px;
+    width: 700px;
+    line-height: 25px;
+    text-align-last: center;
+  }
+  .ingonyama .content button {
+    height: 50px;
+    width: 270px;
+    font-size: small;
+  }
+}
+/* DONATE */
+.donate {
+  height: auto;
+  width: 100%;
+  background-image: url(../images/donate.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.donate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.donate .info {
+  z-index: 20000;
+  width: 90%;
+  padding: 50px;
+  margin-left: 50px;
+}
+.donate .info h1 {
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 0.5cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.donate .info h1 > span {
+  color: rgb(77, 163, 77);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.donate .info p {
+  width: 80%;
+  font-size: 10px;
+  letter-spacing: 1px;
+  /* height: 170px; */
+  line-height: 0.5cm;
+  font-weight: 500px;
+  margin-top: 50px;
+  z-index: 20000;
+}
+.donate .info button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 80px;
+  font-size: 13px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .donate {
+    height: 60vh;
+    width: 100vw;
+  }
+  .donate .info {
+    height: 50vh;
+    width: 90vw;
+    padding: 100px;
+  }
+  .donate .info h1 {
+    text-transform: capitalize;
+    font-size: 45px;
+    line-height: 1cm;
+    letter-spacing: 2.5px;
+  }
+
+  .donate .info h1 > span {
+    font-size: larger;
+  }
+
+  .donate .info p {
+    width: 60%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 170px;
+    line-height: 25px;
+    font-weight: 500px;
+  }
+  .donate .info button {
+    height: 50px;
+    width: 150px;
+    font-size: small;
+  }
+}
+/* CONTACT */
+.contact {
+  background-color: whitesmoke;
+  height: auto;
+  width: 100%;
+  float: none;
+  padding: 50px;
+}
+.contact .contact-info {
+  width: 80%;
+}
+.contact .contact-info .left-side {
+  margin-right: 50px;
+}
+.contact .contact-info h6 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.contact .contact-info p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 0.5cm;
+  font-weight: 500px;
+  margin-bottom: 50px;
+}
+.contact .contact-info > div .icon-div {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: green;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+
+.contact .contact-info div .socials {
+  color: rgb(77, 163, 77);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.contact .input {
+  border: solid 1px rgb(213, 206, 206);
+  border-radius: 5px;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.contact .input input {
+  background-color: white;
+  color: black;
+  border: solid 1px gray;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+  font-size: large;
+  text-align: start;
+}
+
+.contact .input button {
+  background-color: rgb(77, 163, 77);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+  font-size: large;
+}
+@media only screen and (min-width: 768px) {
+  .contact {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+  }
+  .contact .contact-info {
+    height: 40vh;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact .contact-info .left-side {
+    margin-right: 50px;
+  }
+  .contact .contact-info h6 {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .contact .contact-info p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  .contact .contact-info > div .icon-div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+  }
+
+  .contact .input {
+    height: 50vh;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+  }
+  .contact .input input {
+    height: 50px;
+    width: 350px;
+  }
+
+  .contact .input button {
+    height: 50px;
+    width: 350px;
+    font-size: large;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: #fff;
+  height: auto;
+  width: 100%;
+  padding: 50px;
+  float: none;
+  border-bottom: solid 1px whitesmoke;
+}
+footer .logo {
+  display: none;
+}
+footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+footer div {
+  line-height: 0.5cm;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.copyright {
+  height: 5vh;
+  width: 100vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  line-height: 0.5cm;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding: 50px;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    height: 40vh;
+    width: 100vw;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .logo {
+    height: 180px;
+    width: 270px;
+    object-fit: contain;
+    background-image: url(../images/removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  footer div {
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-size: small;
+  }
+
+  .copyright {
+    height: 8vh;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-size: small;
+  }
+}
