@@ -10,73 +10,105 @@ body {
   }
 }
 /* HEADER */
+
 header {
-  height: auto;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.437);
+  background-color: transparent;
   padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 header .logo {
-  display: none;
+  height: 80px;
+  width: 120px;
+  object-fit: contain;
+  background-image: url(../images/header-logo.png);
+  background-position: center;
+  background-size: cover;
 }
-header .nav {
-  text-align: center;
-  margin-top: 20px;
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header li {
+  float: left;
   text-transform: capitalize;
-  line-height: 1cm;
+}
+
+header li a {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  header {
+    height: auto;
+    width: 100%;
+  }
+  header ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header button {
+    margin-right: 30px;
+  }
+}
+li a:hover {
+  background-color: #3c3a3a;
+  cursor: pointer;
 }
 header button {
-  background-color: rgb(77, 163, 77);
-  color: white;
-  height: 30px;
-  width: 80px;
+  height: 50px;
+  width: 110px;
   text-transform: capitalize;
   border: none;
   border-radius: 5px;
-  font-size: 13px;
-  margin-left: 150px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: large;
+  background-color: rgb(77, 163, 77);
+  color: white;
 }
-@media only screen and (min-width: 768px) {
+/* Header Responsive */
+@media only screen and (max-width: 768px) {
   header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    z-index: 1999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header .logo {
+    display: none;
+  }
+  header .button {
+    height: 30px;
+    width: 60px;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    height: auto;
+    width: 100%;
   }
   header .logo {
-    height: 180px;
-    width: 270px;
-    object-fit: contain;
-    background-image: url(../images/removebg-preview.png);
-    background-position: center;
-    background-size: cover;
+    display: none;
   }
-
   header .nav {
-    width: 40%;
     display: flex;
-    justify-content: space-between;
-    text-transform: capitalize;
-    color: white;
-    font-size: large;
-  }
-  header button {
-    height: 50px;
-    width: 110px;
-    text-transform: capitalize;
-    border: none;
-    border-radius: 5px;
-    font-size: large;
+    flex-direction: column;
   }
 }
-
 /* HERO */
 .hero {
   height: auto;
@@ -170,6 +202,116 @@ header button {
     text-transform: capitalize;
   }
 }
+/* INGO-HERO */
+.ingo-hero {
+  background-color: rgba(26, 43, 26, 0.842);
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/ingo-hero.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.ingo-hero .content {
+  z-index: 2;
+}
+.ingo-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(20, 18, 18, 0.527);
+  z-index: 1;
+}
+.ingo-hero .intro h4 {
+  line-height: 1cm;
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ingo-hero .intro p {
+  width: 60%;
+  text-align: center;
+  font-size: large;
+  margin-bottom: 50px;
+}
+.ingo-hero .btn2 {
+  height: 50px;
+  width: 250px;
+  color: #fff;
+  background-color: rgb(77, 163, 77);
+  font-size: larger;
+  border: none;
+  text-transform: capitalize;
+}
+/* DOWNLOAD INGONYAMA */
+.download {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.download h4 {
+  width: 75%;
+  line-height: 1cm;
+  font-size: 23px;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-align-last: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.download p {
+  width: 70%;
+  font-size: large;
+  text-align-last: center;
+}
+.download .buttons {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.download .buttons .btn {
+  background-color: black;
+  color: #fff;
+  height: 60px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download .buttons .btn h5 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .download {
+    height: auto;
+    width: 100%;
+  }
+  .download .buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
 /* PARTNERSHIPS */
 .partners {
   height: auto;
@@ -224,6 +366,49 @@ header button {
     width: 100px;
   }
 }
+/* ABOUT HERO */
+.about-hero {
+  height: 40vh;
+  width: 100vw;
+  padding: 50px;
+}
+.about-hero .about-hero-img {
+  height: inherit;
+  width: 100vw;
+  background-image: url(../images/about-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  padding: 50px;
+}
+@media only screen and (max-width: 500px) {
+  .about-hero .about-hero-img {
+    height: auto;
+    width: 100px;
+  }
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+.about-hero .about-hero-img h1 {
+  text-align: center;
+  margin-top: 20vh;
+  text-transform: capitalize;
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* WHO WE ARE */
 .who-we-are {
   height: auto;
@@ -320,6 +505,70 @@ header button {
     width: 150px;
     font-size: smaller;
   }
+}
+/* INNOVATING FOR CONSERVATION */
+.innovating {
+  height: 65vh;
+  padding: 50px;
+  margin-top: 50px;
+}
+.innovating h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1cm;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.innovating .box {
+  background-color: rgb(231, 239, 239);
+  height: 58vh;
+  width: 70vw;
+  margin-left: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.innovating .box .paragraph {
+  width: 50%;
+}
+.innovating .box .paragraph p {
+  margin-left: 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 0.5cm;
+}
+.innovating .box .innovate-img {
+  height: 60vh;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 76px;
+}
+/* OUR MISSION */
+.our-mission {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-mission .contents {
+  background-color: rgb(21, 76, 21);
+  width: 500px;
+  width: 500px;
+}
+.our-mission .blank {
+  background-color: rgb(56, 129, 137);
+  width: 500px;
+  width: 500px;
+}
+/* OUR VISSION */
+.our-vission {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* EMMISSIONS */
 .emmissions {
@@ -529,6 +778,271 @@ header button {
     font-size: small;
   }
 }
+/* INGONYAMA VISSION */
+.vission {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vission .left {
+  height: 400px;
+  width: 200px;
+  border: 10px solid rgb(228, 149, 70);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vission .left .vission-img {
+  height: 300px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: inherit;
+  background-image: url(../images/ingo-vision.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.vission .left .explanation {
+  background-color: rgba(17, 29, 17, 0.864);
+  color: #fff;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: inherit;
+  height: 250px;
+}
+.vission .left .explanation h2 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: rgb(213, 134, 30);
+  line-height: 25px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.vission .left .explanation p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 15px;
+  font-weight: 100;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.vission .left .explanation .dots {
+  font-size: 40px;
+  text-align: center;
+}
+.vission .left .explanation .dots span {
+  color: rgb(213, 134, 30);
+}
+.vission .left .explanation button {
+  text-align: center;
+  height: 30px;
+  width: 70px;
+  margin-left: 70px;
+  background-color: rgb(213, 134, 30);
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.vission .right {
+  width: 50%;
+  margin-left: 50px;
+}
+.vission .right h2 {
+  width: 90%;
+  text-transform: capitalize;
+  font-size: 23px;
+  line-height: 1cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.vission .right p {
+  width: 60%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .vission {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .vission .right h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .vission .right p {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+/* INGONYA MISSION */
+.mission {
+  height: 80vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.mission .mission-img {
+  height: 400px;
+  width: 200px;
+  background-image: url(../images/ingo-mission.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.mission .details {
+  width: 50%;
+}
+.mission .details h2 {
+  width: 90%;
+  text-transform: capitalize;
+  font-size: 28px;
+  line-height: 1cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.mission .details p {
+  width: 60%;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .mission {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .mission .details h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .mission .details p {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+/* REVIEWS */
+.reviews {
+  height: 100vh;
+  background-image: url(../images/lion1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.reviews .reviews-img {
+  height: 400px;
+  width: 200px;
+  background-image: url(../images/reviews.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.reviews .ingo-review {
+  width: 50%;
+  margin-left: 50px;
+}
+.reviews .ingo-review h2 {
+  width: 90%;
+  text-transform: capitalize;
+  font-size: 20px;
+  line-height: 1cm;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.reviews .ingo-review p {
+  width: 60%;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .reviews {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .reviews .ingo-review h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .reviews .ingo-review p {
+    width: 100%;
+  }
+}
+/* LIONS SAVED */
+.lions {
+  height: 70vh;
+  padding: 50px;
+}
+.lions h2 {
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 1cm;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.lions .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 50px;
+}
+.lions .container .lion-img {
+  height: 280px;
+  width: 200px;
+  border: 15px solid gray;
+  border-radius: 45px;
+}
+@media only screen and (max-width: 500px) {
+  .lions {
+    height: auto;
+    width: 100%;
+    padding: 50px;
+  }
+  .lions .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 /* DONATE */
 .donate {
   height: auto;
@@ -576,7 +1090,6 @@ header button {
   width: 80%;
   font-size: 10px;
   letter-spacing: 1px;
-  /* height: 170px; */
   line-height: 0.5cm;
   font-weight: 500px;
   margin-top: 50px;
